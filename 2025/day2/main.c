@@ -1,10 +1,9 @@
-#import "../util.c"
+#include "../util.c"
 #include <stdio.h>
 
 int main(void) {
-  char *file = file_read("./day2.txt");
-  for (int i = 0; i < 20; i++) {
-
-    printf("%c", file[i]);
+  ReadFileResult file = file_read("./day2.txt");
+  for (int i = 0; i < file.size; i++) {
+    printf("%c", file.buffer[i]);
   }
 }
